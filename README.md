@@ -1,2 +1,2 @@
 # checkpoint-scan
-Code scanning from checkpoint security
+Code scanning from checkpoint security 

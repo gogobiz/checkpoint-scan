@@ -3,6 +3,8 @@ on:
   pull_request:
     branches: 
     - master
+    - develop
+    - main
     
 env:
   SPECTRAL_DSN: ${{ secrets.SPECTRAL_DSN }}

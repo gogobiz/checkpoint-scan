@@ -1,0 +1,28 @@
+    # file name for log, must be writable by "git" user
+    hook_logfile: /var/log/gitlab/hook.log   # optional, but recommended
+    
+    # logging level. For debugging purposes level 6 can be used
+    log_level: 3    # optional, default is 3 (show errors)
+    
+    spectral_dsn: https://spk-******@get.spectralops.io   # REQUIRED
+    
+    # Path to spectral scanner executable. The default is "spectral" 
+    # which works if "spectral" binary containing directory is listed in PATH environment variable.
+    # It is required to be installed into your gitlab instance. 
+    # For installation instructions under your account at get.spectralops.io press "add sources" , then "use CLI",
+    # then "local repos".
+    spectral_binary: spectral   # optional, default is "spectral"
+    
+    # Additional arguments to "spectral history" command, for instance, to exclude some checks. Use with caution!
+    spectral_args: []   # optional, array of strings
+    
+    # stop execution after specified number of seconds; child process `spectral` will also be killed
+    exec_timeout: 30   # optional, seconds (int), default is 30
+
+    # if this string appears in any of the commit messages being pushed, git hook will skip scanning;
+    # use it with caution when you are sure that commits trigger false positive and ONLY false positive scan results;
+    # likely, you may want to alter the latest commit message with "amend" commit to skip scanning
+    skip_scan_keyword: ~    # string, default "skip-spectral-pre-receive"
+
+    # gitlab server host url
+    gitlab_host: http://your-own-gitlab-server.com # REQUIRED

@@ -1,0 +1,16 @@
+match_ignores:
+  ignores:
+    - rule_id: Exposed HTTP Basic Auth
+      rule_name: Exposed HTTP Basic Auth
+      path: pipeline-action.sh
+overrides:
+  ok: false
+  excludeTags: false
+  exclude: false
+  include: false
+  matchIgnores: false
+  failOnError: false
+  ignoreRemoteConfig: false
+  since: false
+  maxSize: false
+  showMatch: false

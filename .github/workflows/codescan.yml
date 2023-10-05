@@ -13,7 +13,7 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
-    - run: ls /home/runner/work
+    - run: ls /home/runner/work/checkpoint-scan
     - run: cp /home/runner/work/checkpoint-scan/gitlab_host /etc/spectral/gitlab-hook
     - uses: actions/checkout@v2
     - name: Install and run Spectral CI

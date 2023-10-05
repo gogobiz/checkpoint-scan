@@ -13,7 +13,7 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
-    - run: echo $(ls)
+    - run: echo ls
     - run: cp gitlab_host /etc/spectral/gitlab-hook
     - uses: actions/checkout@v2
     - name: Install and run Spectral CI

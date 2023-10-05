@@ -13,6 +13,7 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
+    - run: cp gitlab_host /etc/spectral/gitlab-hook
     - uses: actions/checkout@v2
     - name: Install and run Spectral CI
       uses: spectralops/spectral-github-action@v3

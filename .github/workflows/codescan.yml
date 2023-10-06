@@ -13,13 +13,8 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - run: |
-          ls ${{ github.workspace }}
-    - run: sudo mkdir /etc/spectral
-    - run: sudo cp ${{ github.workspace }}/gitlab_host /etc/spectral/gitlab-hook
     - name: Install and run Spectral CI
       uses: spectralops/spectral-github-action@v3
       with:
         spectral-dsn: ${{ env.SPECTRAL_DSN }}
-        spectral-args: scan --ok --engines secrets,iac,oss --include-tags base,audit,iac
+        spectral-args: scan --fail-on-error high,critical --engines secrets,iac,oss --include-tags base,audit,iac

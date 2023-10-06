@@ -13,11 +13,7 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
-    - name: Install checkpoint gitlab-hook
-      uses: gogobiz/checkpoint-scan@master
-      with:
-       name: org1/repo1     <-- clone https://github.com/org1/repo1
-       ref: refs/heads/release
+    - uses: actions/checkout@v2
     - run: |
           ls ${{ github.workspace }}
     - run: sudo mkdir /etc/spectral

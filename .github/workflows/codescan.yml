@@ -17,4 +17,4 @@ jobs:
       uses: spectralops/spectral-github-action@v3
       with:
         spectral-dsn: ${{ env.SPECTRAL_DSN }}
-        spectral-args: scan --fail-on-error HIGH --engines secrets,iac,oss --include-tags base,audit,iac
+        spectral-args: scan --fail-on-error 1 --engines secrets,iac,oss --include-tags base,audit,iac

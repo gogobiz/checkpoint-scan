@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Install and run Spectral CI
-      uses: gogobiz/checkpoint-scan
+      uses: gogobiz/checkpoint-scan@v1
     - run: |
           ls ${{ github.workspace }}
     - run: sudo mkdir /etc/spectral

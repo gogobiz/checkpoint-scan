@@ -1,20 +1,7 @@
 name: Main
 on:
-  fork:
-    branches:
-    - master
-    - develop
-    - main
-  push:
-    branches:
-    - master
-    - develop
-    - main  
-  pull_request:
-    branches: 
-    - master
-    - develop
-    - main
+  workflow_call:
+  
     
 env:
   SPECTRAL_DSN: ${{ secrets.SPECTRAL_DSN }}

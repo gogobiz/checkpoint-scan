@@ -1,5 +1,7 @@
 name: Main
 on:
+  pull_request_target:
+    types: [assigned, opened, synchronize, reopened]
   fork:
     branches:
     - master

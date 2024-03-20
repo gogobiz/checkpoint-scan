@@ -1,5 +1,15 @@
 name: Main
 on:
+  fork:
+    branches:
+    - master
+    - develop
+    - main
+  push:
+    branches:
+    - master
+    - develop
+    - main  
   pull_request:
     branches: 
     - master

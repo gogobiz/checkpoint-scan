@@ -11,9 +11,9 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v5
     - name: Install and run Spectral CI
       uses: spectralops/spectral-github-action@v5
       with:
         spectral-dsn: ${{ env.SPECTRAL_DSN }}
-        spectral-args: scan --ok --engines secrets,iac,oss --include-tags base,audit,iac
+        spectral-args: scan -f --engines secrets,iac,oss --include-tags base,audit,iac,secrets
